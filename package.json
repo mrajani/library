@@ -40,7 +40,8 @@
     "delay": "2500",
     "env": {
       "NODE_ENV": "development",
-      "PORT": 4000
+      "PORT": 4000,
+      "MLAB" : "mongodb://iono:password@ds111113.mlab.com:11113/library"
     }
   }
 }

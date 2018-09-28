@@ -8,7 +8,7 @@ const mlabRouter = express.Router();
 function router(nav) {
   mlabRouter.route('/')
     .get((req, res) => {
-      const url = 'mongodb://iono:ionosol1!@ds111113.mlab.com:11113/library';
+      const url = process.env.MLAB; // Set in package.json nodemon section
       const dBName = 'library';
 
       (async function mongo() {
@@ -40,7 +40,7 @@ function router(nav) {
   mlabRouter.route('/:id')
     .get((req, res) => {
       const { id } = req.params;
-      const url = 'mongodb://iono:ionosol1!@ds111113.mlab.com:11113/library';
+      const url = process.env.MLAB; // Set in package.json nodemon section
       const dBName = 'library';
 
       (async function mongo() {
